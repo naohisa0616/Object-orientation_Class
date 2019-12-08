@@ -26,13 +26,33 @@ import UIKit
 class MyClass {
 //    インスタンスプロパティ（初期値はイニシャライザで設定します）
     let msg:String
-//    イニシャライザ
+//    イニシャライザ1では初期化されないので、nilを許可するオプショナルにします
+    let name: String?
+    
+//    イニシャライザ1（1個目のイニシャライザ）
     init(msg:String = "ハロー") {
         self.msg = msg
+        self.name = nil
     }
+    
+    //    イニシャライザ2（2個目のイニシャライザ）
+    init(msg:String = "ハロー", name:String) {
+        self.msg = msg
+        self.name = name
+    }
+    
 //    インスタンスメソッド
     func hello()  {
-        print(msg)
+        var helloMsg:String
+//        nameがnilでなければuserに代入します。
+        if let user = name {
+//            nameがnilでなければ連結する
+            helloMsg = user + "さん。" + msg
+        } else {
+//        namehがnilだった場合はmsgだけを代入します
+            helloMsg = msg
+        }
+        
     }
     
 }
@@ -41,10 +61,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//      MyClassクラスのインスタンスmyObjを作る（イニシャライザの引数msgに渡される）
-        let myObj = MyClass(msg: "こんにちは")
-//      hello()メソッドを実行する
-        myObj.hello()
+//      MyClassクラスのインスタンスmyObjを作る（イニシャライザ1が呼ばれる）
+        let myObj1 = MyClass(msg: "こんにちは")
+//      hello()メソッドを実行する（nameはnilなので、hello()ではelseブロックが実行される）
+        myObj1.hello()
     }
 
 
