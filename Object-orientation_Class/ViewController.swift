@@ -61,10 +61,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//      MyClassクラスのインスタンスmyObjを作る（イニシャライザ1が呼ばれる）
-        let myObj1 = MyClass(msg: "こんにちは")
-//      hello()メソッドを実行する（nameはnilなので、hello()ではelseブロックが実行される）
-        myObj1.hello()
+//      MyClassクラスのインスタンスmyObjを作る（イニシャライザ2が呼ばれる）
+        let myObj2 = MyClass(msg: "こんにちは", name: "桜子")
+//      hello()メソッドを実行する
+        myObj2.hello()
     }
 
 
