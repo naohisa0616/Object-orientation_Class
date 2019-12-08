@@ -22,17 +22,6 @@ import UIKit
 //}
 //
 
-//MyClassクラスの定義
-class MyClass {
-//    インスタンスプロパティ
-    var msg = "ハロー"
-//    インスタンスメソッド
-    func hello()  {
-        print(msg)
-    }
-    
-}
-
 //ViewControllerクラス定義
 class ViewController: UIViewController {
 
