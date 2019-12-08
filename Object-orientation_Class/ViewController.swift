@@ -22,17 +22,27 @@ import UIKit
 //}
 //
 
+//MyClassクラスの定義
+class MyClass {
+//    インスタンスプロパティ（初期値はイニシャライザで設定します）
+    let msg:String
+//    イニシャライザ
+    init(msg:String = "ハロー") {
+        self.msg = msg
+    }
+//    インスタンスメソッド
+    func hello()  {
+        print(msg)
+    }
+    
+}
 //ViewControllerクラス定義
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//      MyClassクラスのインスタンスmyObjを作る
-        let myObj = MyClass()
-//      hello()メソッドを実行する
-        myObj.hello()
-//      msgプロパティの値を変更する
-        myObj.msg = "ハーイ！元気かーい？"
+//      MyClassクラスのインスタンスmyObjを作る（イニシャライザの引数msgに渡される）
+        let myObj = MyClass(msg: "こんにちは")
 //      hello()メソッドを実行する
         myObj.hello()
     }
