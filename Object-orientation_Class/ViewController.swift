@@ -25,7 +25,7 @@ import UIKit
 //MyClassクラスの定義
 class MyClass {
 //    インスタンスプロパティ
-    let msg = "ハロー"
+    var msg = "ハロー"
 //    インスタンスメソッド
     func hello()  {
         print(msg)
@@ -41,6 +41,10 @@ class ViewController: UIViewController {
 //      MyClassクラスのインスタンスmyObjを作る
 //      MyClassクラスのインスタンスを作って変数myObjに入れます
         let myObj = MyClass()
+//      hello()メソッドを実行する
+        myObj.hello()
+//      msgプロパティの値を変更する
+        myObj.msg = "ハーイ！元気かーい？"
 //      hello()メソッドを実行する
         myObj.hello()
     }
