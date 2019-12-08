@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //      MyClassクラスのインスタンスmyObjを作る
-//      MyClassクラスのインスタンスを作って変数myObjに入れます
         let myObj = MyClass()
 //      hello()メソッドを実行する
         myObj.hello()
