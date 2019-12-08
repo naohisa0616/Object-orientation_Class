@@ -61,10 +61,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//      MyClassクラスのインスタンスObj3を作る（イニシャライザ1でmsgを省略したケース）
-        let Obj3 = MyClass()
+//      MyClassクラスのインスタンスObj3を作る（イニシャライザ2でmsgを省略したケースになる）（プロパティのmsgは"ハロー"nameは"月子"で初期化される）
+        let Obj4 = MyClass(name: "月子")
 //      hello()メソッドを実行する
-        Obj3.hello()
+        Obj4.hello()
     }
 
 
